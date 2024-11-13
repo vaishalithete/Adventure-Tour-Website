@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Tours</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="travel.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Adventure Tours</div>
+        <nav>
+            <ul>
+                <li><a href="#home" style="--i:1;" class="active">Home</a></li>
+                <li><a href="#tours" style="--i:2;" class="">Tours</a></li>
+                <li><a href="#about" style="--i:3;"  class="">About Us</a></li>
+                <li><a href="#contact" style="--i:4;" class="">Contact</a></li>
+                <li><a href="/login" style="--i:5;" class="">Login</a></li>
+                {{!-- <li><a href="#" onclick="window.location.href='http://localhost:3000/'">Login</a></li> --}}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Explore the World</h1>
+            <p>Your adventure starts here!</p>
+            <a href="#tours" class="btn">Discover Tours</a>
+        </section>
+
+        <section id="tours" class="tours">
+            <h2>Our Tours</h2>
+            <div class="tour-card">
+                <img src="../photo/mo.jpg" alt="Mountain Trekking">
+                <h3>Mountain Trekking</h3>
+                <p>Experience the thrill of trekking through breathtaking mountains.</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div class="tour-card">
+                <img src="../photo/riv.jpg" alt="River Rafting">
+                <h3>River Rafting</h3>
+                <p>Join us for an exhilarating river rafting adventure!</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div class="tour-card">
+                <img src="../photo/des.jpg" alt="Desert Safari">
+                <h3>Desert Safari</h3>
+                <p>Discover the beauty of the desert with our guided safari tours.</p>
+                <button class="btn">Book Now</button>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Us</h2>
+
+            <div class="about-container">
+                <div class="about-photo">
+                    <img src="../photo/adventure-1.jpg" style="height: 500px;" width="600px">
+                </div>
+                
+                <div class="about-text">
+                    <p> Junoon is an organisation run by people who are passionate for nature and adventure. Spearheading the adventure and nature tourism movement in MP, Junoon Adventures and Eco Tours Private Limited (earlier known as Junoon Adventure Sports Academy) has been providing thrilling experiences to individual, group and corporate travelers since 1999.    
+                    <br>
+                    <br>
+                    With an extensive team of certified adventure instructors and a huge knowledge base for adventure tourism in central India, we provide high end trekking, camping, rock based adventures like rappelling and rock climbing, spelunking, high and low line rope course activities and other land based adventures. We also organise and conduct Himalayan Camping programs under the brand name JT2 – Junoonis Trek to the Top in which we explore a new location for the event every year.
+                    <br>                    
+                    <br>                    
+                    On a professional front, Junoon Adventure is a MINISTRY OF TOURISM, GOVERNMENT OF INDIA CERTIFIED an ATOAI ACTIVE ADVENTURE TOUR OPERATOR with certified instructors and facilitators who possess more than 12 years of field experience.  Our team leader – Mr. Yog Chinmoy is a name that almost every adventure junkie and nature lover in town knows. His knowledge of Bhopal’s (in fact MP’s) terrain, geographical features, wildlife, plants and even birds in unparalleled.
+                    <br>
+                    <br>
+                    <b>VISION</b> 
+                    <br>
+                    Junoon Adventure is focused on promoting adventure-based experiences while fostering personal and team development. Their vision revolves around offering immersive adventure activities that help individuals and teams build essential life skills, such as teamwork, leadership, communication, and problem-solving.                       
+                    <br>
+                    <br>
+                    <b>MISSION</b>
+                    <br>
+                    The mission of Junoon Adventure centers around creating transformative adventure experiences while preserving nature. They aim to offer unique, handcrafted travel adventures, including trekking, wildlife safaris, and experiential learning programs for both students and corporations. They focus on building a connection with nature while ensuring safety and respect for local cultures and ecosystems.
+
+                    We are a passionate team of adventurers dedicated to bringing you the best tours and treks around the globe.
+    
+                    </p>
+                </div>    
+            </div>
+        </section>
+
+
+        <section class="contact" id="contact">
+
+            <div class="contact-text">
+    
+                <h2>Contact <span>Me</span> </h2>
+                <h4>Let's Travel Together</h4>
+                <p>Live the adventure of a lifetime! From thrilling activities to scenic views, every tour is crafted for discovery and delight.</p>
+    
+                <div class="contact-list">
+                    <li>
+                        <i class='bx bxs-envelope email-icon'></i> adventuretours@gmail.com
+                    </li>
+                    <li>
+                        <i class='bx bxs-phone-call email-icon' ></i> 0123456789
+                    </li>
+                </div>
+
+                <div class="contact-icons">
+                    <a href=""><i class='bx bxl-whatsapp'></i><a>
+                    <a href=""><i class='bx bxl-instagram'></i><a>
+                    <a href=""><i class='bx bxl-linkedin'></i><a>
+                    <a href=""><i class='bx bxl-facebook-circle'></i><a>
+                    <a href=""><i class='bx bxl-twitter'></i></i><a>
+                </div>
+            </div>
+    
+            <div class="contact-form">
+                <form action="">
+                    <input type="text" placeholder="Enter Your Name" required>
+                    <input type="email" placeholder="Enter Your Email" required>
+    
+                    <input type="" placeholder="Enter Your Subject">
+                    <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+    
+                    <input type="submit" value="submit" class="send">
+                </form>
+            </div>
+    
+        </section>
+        
+        <a href="#" class="top"><i class='bx bx-up-arrow-alt'></i></a>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Adventure Tours - All rights reserved</p>
+    </footer>
+
+    <script src="1.js"></script>
+</body>
+</html>

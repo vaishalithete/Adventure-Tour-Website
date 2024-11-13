@@ -1,0 +1,386 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #9ac9ff, #4ac0ff);
+}
+
+header {
+    /* background: #FF5733; */
+    /* background: #0197fc; */
+    background: #0465e4;
+    color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 50px; */
+}
+
+header .logo {
+    font-size: 34px;
+    font-weight: bold;
+
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .3s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.hero {
+    background: url('../photo/adventure.jpg') no-repeat center center/cover;
+    color: rgb(250, 250, 250);
+    height: 660px;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p{
+    color: rgb(255, 255, 255);
+}
+
+.btn {
+    background: #0465e4;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+.btn:hover{
+    background-color: #074091;
+    transform: translateY(-5px);
+    
+}
+
+.tours {
+    height: 1000px;
+    padding: 20px;
+    text-align: center;
+}
+
+.tours h2{
+    margin-top: 100px;
+    font-size: 70px;
+}
+
+.tour-card {
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    display: inline-block;
+    width: 30%;
+}
+
+.tour-card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.about {
+    padding: 20px;
+    text-align: center;
+    height: 1000px;
+}
+
+.about h2{
+    font-size: 70px;
+    margin-bottom: 40px;
+}
+
+.about-container {
+    display: flex; /* Use flexbox to align items side by side */
+    align-items: flex-start; /* Align items at the start vertically */
+}
+
+.about-photo {
+    flex: 0 0 auto; 
+    /* margin-left: 10px; */
+    height: 600px;
+    width: 700px;
+    margin-right: 30px; 
+}
+
+/* Stack paragraphs vertically */
+.about-text {
+    display: flex;
+    flex-direction: column; 
+    text-align: justify; 
+    max-width: 1000px; 
+    margin-right: 15px;
+}
+
+.about-text p {
+    margin: 0; 
+    margin-bottom: 20px;
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+    padding-left: 30px;
+    margin-top: 130px;
+}
+
+.contact-text h2{
+    font-size: 70px;
+    line-height: 1;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.contact-text h2 span{
+    color: rgb(0, 0, 0);
+    /* color: rgb(0, 0, 0); */
+}
+
+.contact-text h4{
+    margin: 15px 0;
+    color: rgb(35, 8, 234);
+    /* color: rgb(228, 228, 228); */
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-text p{
+    color: rgb(8, 8, 8);
+    /* color: rgb(177, 177, 177); */
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+
+.contact-list{
+    margin-bottom: 3rem;
+}
+
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contact-list i{
+    display: inline-block;
+    /* color: #0465e4; */
+    color: #0458c5;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    transition: all .40s ease;
+}
+
+.contact-list .email-icon {
+    vertical-align: middle;
+    margin-right: 8px;
+    font-size: 1.2em; 
+    align-items: center;
+}
+
+.contact-list li a:hover{
+    transform: scale(1.01) translateY(-5px);
+    color: #0ef;
+}
+
+.contact-icons i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0465e4;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0153bd;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.contact-icons i:hover{
+    background: #0465e4;
+    color: #000;
+    box-shadow: 0 0 20px #0465e4;
+}
+
+.contact-form form{
+    position: relative;
+}
+
+.contact-form form input, form textarea{
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 18px;
+    background: #3b3b3b;
+    /* background: #555557; */
+    color: #fffefe;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.contact-form textarea{
+    resize: none;
+    height: 220px;
+}
+
+.contact-form form .send{
+    display: inline-block;
+    padding: 14px 60px;
+    border-radius: 30px;
+    background-color: #0465e4;
+    color: white;
+    /* padding: 10px 20px; */
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 0px;
+
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.contact-form form .send:hover{
+    background-color: #074091;
+    transform: translateY(-5px);
+}
+
+.last-text p{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: rgb(7, 85, 91);
+    font-weight: 300;
+    margin-top: 70px;
+}
+
+.top{
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+}
+
+.top i{
+    color: #000;
+    background: #0465e4;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .tour-card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+}
